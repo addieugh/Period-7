@@ -3,6 +3,7 @@
     Dim m_shapes As New Collection
     Dim c As Color
     Dim w As Integer
+    Dim type As String
 
 
     Private Sub pictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
@@ -12,13 +13,47 @@
 
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
-            Dim l As New circle(PictureBox1.Image, m_Previous, e.Location)
-            l.Pen = New Pen(c, w)
-            l.w = TrackBar2.Value
-            l.h = TrackBar3.Value
-            m_shapes.Add(l)
+            Dim d As Object
+
+            If Type = "line" Then
+                d = New Line(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+
+            If Type = "rectangle" Then
+                d = New rect(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, w)
+            End If
+
+            If type = "circle" Then
+                d = New circle(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+            End If
+
+            If type = "arc" Then
+                d = New arc(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+            End If
+
+            If type = "square" Then
+                d = New square(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+            End If
+
+            If type = "pie" Then
+                d = New pie(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+            End If
+
+            If type = "fill" Then
+                d = New fill(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+            End If
+
+            m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
+
         End If
     End Sub
 
@@ -100,5 +135,29 @@
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         SaveFileDialog1.ShowDialog()
         PictureBox1.Image.Save(SaveFileDialog1.FileName)
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Type = "pie"
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Type = "rectangle"
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Type = "arc"
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        type = "circle"
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        type = "square"
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        type = "fill"
     End Sub
 End Class
