@@ -28,6 +28,8 @@
             If type = "circle" Then
                 d = New circle(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
+                d.w = TrackBar2.Value
+                d.h = TrackBar3.Value
             End If
 
             If type = "arc" Then
@@ -50,17 +52,32 @@
                 d.pen = New Pen(c, w)
             End If
 
-            m_shapes.Add(d)
-            PictureBox1.Invalidate()
-            m_Previous = e.Location
+            If type = "ngon" Then
+                d = New ngon(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+                d.radius = TrackBar5.Value
+                d.sides = TrackBar4.Value
+            End If
 
-        End If
+            If type = "picture" Then
+                d = New PBox(PictureBox1.Image, m_Previous, e.Location)
+                d.picture = PictureBox2.Image
+                d.w = TrackBar2.Value
+                d.h = TrackBar3.Value
+            End If
+
+            m_shapes.Add(d)
+                PictureBox1.Invalidate()
+                m_Previous = e.Location
+
+            End If
     End Sub
 
     Private Sub pictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
         m_Previous = Nothing
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
 
         Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
             Using g As Graphics = Graphics.FromImage(bmp)
@@ -149,15 +166,35 @@
         Type = "arc"
     End Sub
 
-    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+    Private Sub Button15_Click(sender As Object, e As EventArgs)
         type = "circle"
     End Sub
 
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+    Private Sub Button16_Click(sender As Object, e As EventArgs)
         type = "square"
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
         type = "fill"
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        type = "ngon"
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs)
+        type = "Line"
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        type = "picture"
+    End Sub
+
+    Private Sub Button16_Click_1(sender As Object, e As EventArgs) Handles Button16.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
+        PictureBox2.Load(OpenFileDialog1.FileName)
     End Sub
 End Class
