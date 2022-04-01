@@ -66,24 +66,31 @@
                 d.h = TrackBar3.Value
             End If
 
-            m_shapes.Add(d)
-                PictureBox1.Invalidate()
-                m_Previous = e.Location
-
+            If type = "Line" Then
+                d = New Line(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+                d.xspeed = xSpeedTrackBar.Value
             End If
+
+
+            m_shapes.Add(d)
+            PictureBox1.Invalidate()
+            m_Previous = e.Location
+        End If
+
     End Sub
 
     Private Sub pictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
         m_Previous = Nothing
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-
-        Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
+        If PictureBox1.Image Is Nothing Then
+            Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
             Using g As Graphics = Graphics.FromImage(bmp)
                 g.Clear(Color.White)
             End Using
             PictureBox1.Image = bmp
+        End If
 
 
     End Sub
@@ -92,6 +99,9 @@
         For Each s As Object In m_shapes
             s.Draw()
         Next
+        If (CheckBox1.Checked) Then
+            Refresh()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -196,5 +206,9 @@
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
         PictureBox2.Load(OpenFileDialog1.FileName)
+    End Sub
+
+    Private Sub Button19_Click_1(sender As Object, e As EventArgs) Handles Button19.Click
+        type = "Line"
     End Sub
 End Class
