@@ -22,11 +22,15 @@
 
             If Type = "rectangle" Then
                 d = New rect(PictureBox1.Image, m_Previous, e.Location)
+                d.fill = CheckBox2.Checked
+                d.color1 = Button2.BackColor
+                d.color2 = Button3.BackColor
                 d.Pen = New Pen(c, w)
             End If
 
             If type = "circle" Then
                 d = New circle(PictureBox1.Image, m_Previous, e.Location)
+
                 d.pen = New Pen(c, w)
                 d.w = TrackBar2.Value
                 d.h = TrackBar3.Value
@@ -109,14 +113,21 @@
         c = ColorDialog1.Color
         Button1.BackColor = c
 
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        c = sender.backcolor
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        sender.BackColor = c
+
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        c = sender.backcolor
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        sender.BackColor = c
     End Sub
 
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll

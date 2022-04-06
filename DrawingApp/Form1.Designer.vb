@@ -56,6 +56,7 @@ Partial Class Form1
         Me.xSpeedTrackBar = New System.Windows.Forms.TrackBar()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -351,11 +352,22 @@ Partial Class Form1
         Me.CheckBox1.Text = "AutoRefresh"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(96, 466)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(38, 17)
+        Me.CheckBox2.TabIndex = 34
+        Me.CheckBox2.Text = "Fill"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1035, 545)
+        Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button19)
         Me.Controls.Add(Me.xSpeedTrackBar)
@@ -436,4 +448,5 @@ Partial Class Form1
     Friend WithEvents xSpeedTrackBar As TrackBar
     Friend WithEvents Button19 As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
 End Class
