@@ -30,7 +30,6 @@
 
             If type = "circle" Then
                 d = New circle(PictureBox1.Image, m_Previous, e.Location)
-
                 d.pen = New Pen(c, w)
                 d.w = TrackBar2.Value
                 d.h = TrackBar3.Value
@@ -44,6 +43,10 @@
             If type = "square" Then
                 d = New square(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
+
+                d.w = TrackBar2.Value
+                d.h = TrackBar3.Value
+
             End If
 
             If type = "pie" Then
@@ -187,9 +190,7 @@
         Type = "arc"
     End Sub
 
-    Private Sub Button15_Click(sender As Object, e As EventArgs)
-        type = "circle"
-    End Sub
+
 
     Private Sub Button16_Click(sender As Object, e As EventArgs)
         type = "square"
@@ -221,5 +222,21 @@
 
     Private Sub Button19_Click_1(sender As Object, e As EventArgs) Handles Button19.Click
         type = "Line"
+    End Sub
+
+    Private Sub xSpeedTrackBar_Scroll(sender As Object, e As EventArgs) Handles xSpeedTrackBar.Scroll
+
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        type = "square"
+    End Sub
+
+    Private Sub TrackBar2_Scroll(sender As Object, e As EventArgs) Handles TrackBar2.Scroll
+
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        type = "circle"
     End Sub
 End Class
