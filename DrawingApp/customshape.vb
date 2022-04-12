@@ -1,6 +1,7 @@
-﻿Public Class square
+﻿Public Class customshape
     Public Property xSpeed As Integer
     Public Property ySpeed As Integer
+    Public Property Picture As Image
 
     Public Property w As Integer
     Public Property h As Integer
@@ -23,6 +24,8 @@
             yOffset += ySpeed
 
             g.DrawRectangle(Pen, m_a.X + xOffset, m_a.Y + yOffset, w + xOffset, h + yOffset)
+            g.DrawArc(Pen, m_a.X + xOffset, m_a.Y + yOffset, 100 + xOffset, 100 + yOffset, 0 + xOffset, 90 + yOffset)
+            g.DrawImage(Picture, m_a.X + xOffset, m_a.Y + yOffset, w + xOffset, h + yOffset)
         End Using
 
     End Sub

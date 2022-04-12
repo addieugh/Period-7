@@ -59,6 +59,7 @@ Partial Class Form1
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -382,11 +383,21 @@ Partial Class Form1
         Me.Button20.Text = "Square"
         Me.Button20.UseVisualStyleBackColor = True
         '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(94, 498)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(93, 23)
+        Me.Button21.TabIndex = 37
+        Me.Button21.Text = "CustomShape"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(884, 531)
+        Me.Controls.Add(Me.Button21)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBox2)
@@ -473,4 +484,5 @@ Partial Class Form1
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button20 As Button
+    Friend WithEvents Button21 As Button
 End Class

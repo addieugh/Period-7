@@ -33,17 +33,28 @@
                 d.pen = New Pen(c, w)
                 d.w = TrackBar2.Value
                 d.h = TrackBar3.Value
+                d.xspeed = xSpeedTrackBar.Value
+            End If
+
+            If type = "customshape" Then
+                d = New customshape(PictureBox1.Image, m_Previous, e.Location)
+                d.pen = New Pen(c, w)
+                d.w = TrackBar2.Value
+                d.h = TrackBar3.Value
+                d.xspeed = xSpeedTrackBar.Value
+                d.picture = PictureBox2.Image
             End If
 
             If type = "arc" Then
                 d = New arc(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
+                d.xspeed = xSpeedTrackBar.Value
             End If
 
             If type = "square" Then
                 d = New square(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
-
+                d.xspeed = xSpeedTrackBar.Value
                 d.w = TrackBar2.Value
                 d.h = TrackBar3.Value
 
@@ -52,11 +63,13 @@
             If type = "pie" Then
                 d = New pie(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
+                d.xspeed = xSpeedTrackBar.Value
             End If
 
             If type = "fill" Then
                 d = New fill(PictureBox1.Image, m_Previous, e.Location)
                 d.pen = New Pen(c, w)
+                d.xspeed = xSpeedTrackBar.Value
             End If
 
             If type = "ngon" Then
@@ -71,6 +84,7 @@
                 d.picture = PictureBox2.Image
                 d.w = TrackBar2.Value
                 d.h = TrackBar3.Value
+                d.xspeed = xSpeedTrackBar.Value
             End If
 
             If type = "Line" Then
@@ -238,5 +252,9 @@
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         type = "circle"
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        type = "customshape"
     End Sub
 End Class

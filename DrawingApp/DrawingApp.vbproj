@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="arc.vb" />
     <Compile Include="circle.vb" />
+    <Compile Include="customshape.vb" />
     <Compile Include="Fill.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -102,6 +103,12 @@
     <Compile Include="PBox.vb" />
     <Compile Include="pie.vb" />
     <Compile Include="rect.vb" />
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="square.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +120,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
