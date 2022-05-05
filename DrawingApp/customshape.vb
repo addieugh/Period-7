@@ -26,6 +26,7 @@
             g.DrawRectangle(Pen, m_a.X + xOffset, m_a.Y + yOffset, w + xOffset, h + yOffset)
             g.DrawArc(Pen, m_a.X + xOffset, m_a.Y + yOffset, 100 + xOffset, 100 + yOffset, 0 + xOffset, 90 + yOffset)
             g.DrawImage(Picture, m_a.X + xOffset, m_a.Y + yOffset, w + xOffset, h + yOffset)
+            g.DrawRectangle(Pen, m_a.X + xOffset, m_a.Y + yOffset, 100 + xOffset, 150 + yOffset)
         End Using
 
     End Sub

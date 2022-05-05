@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
@@ -40,17 +40,10 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar3 = New System.Windows.Forms.TrackBar()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
         Me.TrackBar4 = New System.Windows.Forms.TrackBar()
         Me.TrackBar5 = New System.Windows.Forms.TrackBar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button15 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.xSpeedTrackBar = New System.Windows.Forms.TrackBar()
@@ -58,25 +51,25 @@ Partial Class Form1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xSpeedTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(666, 420)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
@@ -177,7 +170,7 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(616, 454)
+        Me.Button10.Location = New System.Drawing.Point(560, 443)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(62, 25)
         Me.Button10.TabIndex = 12
@@ -186,7 +179,7 @@ Partial Class Form1
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(616, 485)
+        Me.Button11.Location = New System.Drawing.Point(628, 443)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(62, 25)
         Me.Button11.TabIndex = 13
@@ -212,51 +205,6 @@ Partial Class Form1
         Me.TrackBar3.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar3.TabIndex = 15
         Me.TrackBar3.Value = 10
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(12, 456)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(75, 23)
-        Me.Button12.TabIndex = 16
-        Me.Button12.Text = "Pie"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(93, 456)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
-        Me.Button13.TabIndex = 17
-        Me.Button13.Text = "Rectangle"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(174, 456)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(75, 23)
-        Me.Button14.TabIndex = 18
-        Me.Button14.Text = "Arc"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(255, 456)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(75, 23)
-        Me.Button17.TabIndex = 21
-        Me.Button17.Text = "Fill"
-        Me.Button17.UseVisualStyleBackColor = True
-        '
-        'Button18
-        '
-        Me.Button18.Location = New System.Drawing.Point(336, 456)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(75, 23)
-        Me.Button18.TabIndex = 22
-        Me.Button18.Text = "N-Gon"
-        Me.Button18.UseVisualStyleBackColor = True
         '
         'TrackBar4
         '
@@ -296,25 +244,6 @@ Partial Class Form1
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Radius:"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources._111012_NakedMoleRatPhoto_hmed_1125a
-        Me.PictureBox2.Location = New System.Drawing.Point(753, 367)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(62, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 27
-        Me.PictureBox2.TabStop = False
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(498, 456)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(75, 23)
-        Me.Button15.TabIndex = 28
-        Me.Button15.Text = "Circle"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -338,9 +267,9 @@ Partial Class Form1
         '
         'Button19
         '
-        Me.Button19.Location = New System.Drawing.Point(417, 456)
+        Me.Button19.Location = New System.Drawing.Point(287, 438)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(75, 23)
+        Me.Button19.Size = New System.Drawing.Size(49, 35)
         Me.Button19.TabIndex = 32
         Me.Button19.Text = "Line" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Button19.UseVisualStyleBackColor = True
@@ -374,29 +303,116 @@ Partial Class Form1
         Me.Label4.TabIndex = 35
         Me.Label4.Text = "Speed:"
         '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(452, 438)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(88, 35)
+        Me.Button21.TabIndex = 37
+        Me.Button21.Text = "CustomShape"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
         'Button20
         '
-        Me.Button20.Location = New System.Drawing.Point(271, 489)
+        Me.Button20.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._480px_Screw_Head___Square_External1
+        Me.Button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button20.Location = New System.Drawing.Point(342, 438)
         Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(75, 23)
+        Me.Button20.Size = New System.Drawing.Size(49, 35)
         Me.Button20.TabIndex = 36
         Me.Button20.Text = "Square"
         Me.Button20.UseVisualStyleBackColor = True
         '
-        'Button21
+        'Button15
         '
-        Me.Button21.Location = New System.Drawing.Point(94, 498)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(93, 23)
-        Me.Button21.TabIndex = 37
-        Me.Button21.Text = "CustomShape"
-        Me.Button21.UseVisualStyleBackColor = True
+        Me.Button15.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.circle
+        Me.Button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button15.Location = New System.Drawing.Point(12, 438)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(49, 36)
+        Me.Button15.TabIndex = 28
+        Me.Button15.Text = "Circle"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources._111012_NakedMoleRatPhoto_hmed_1125a
+        Me.PictureBox2.Location = New System.Drawing.Point(753, 367)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(62, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 27
+        Me.PictureBox2.TabStop = False
+        '
+        'Button18
+        '
+        Me.Button18.BackgroundImage = CType(resources.GetObject("Button18.BackgroundImage"), System.Drawing.Image)
+        Me.Button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button18.Location = New System.Drawing.Point(232, 438)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(49, 35)
+        Me.Button18.TabIndex = 22
+        Me.Button18.Text = "N-Gon"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button17
+        '
+        Me.Button17.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.black_rec
+        Me.Button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button17.Location = New System.Drawing.Point(177, 438)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(49, 35)
+        Me.Button17.TabIndex = 21
+        Me.Button17.Text = "Fill"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.arch
+        Me.Button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button14.Location = New System.Drawing.Point(122, 438)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(49, 36)
+        Me.Button14.TabIndex = 18
+        Me.Button14.Text = "Arc"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.INNT6RHNTaYMwuI1yWA4_rectangle
+        Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button13.Location = New System.Drawing.Point(397, 438)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(49, 36)
+        Me.Button13.TabIndex = 17
+        Me.Button13.Text = "Rectangle"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.BackgroundImage = CType(resources.GetObject("Button12.BackgroundImage"), System.Drawing.Image)
+        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button12.Location = New System.Drawing.Point(67, 438)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(49, 36)
+        Me.Button12.TabIndex = 16
+        Me.Button12.Text = "Pie"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(666, 420)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 531)
+        Me.BackColor = System.Drawing.Color.Honeydew
+        Me.ClientSize = New System.Drawing.Size(856, 493)
         Me.Controls.Add(Me.Button21)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Label4)
@@ -432,16 +448,17 @@ Partial Class Form1
         Me.Controls.Add(Me.TrackBar1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.xSpeedTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
